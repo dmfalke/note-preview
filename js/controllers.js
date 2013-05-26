@@ -5,9 +5,8 @@ function NoteCtrl($scope) {
 
   $scope.message = "Dear John Smith,\n\n" +
 
-    "I hope this note finds you and your family well.\n\n" +
+    "I hope this note finds you and your family well.\n\n\n" +
 
-    "Sincerely,\n\n" +
-
+    "Sincerely,\n" +
     "Joe Doe";
 }
