@@ -19,7 +19,7 @@
 
         <div class="span6">
           <p>Type here:</p>
-          <textarea name="message" class="input-block-level" ng-model="message"></textarea>
+          <textarea autofocus class="input-block-level" ng-model="message"></textarea>
 
             <label class="radio inline font-condiment">
               <input ng-model="font" type="radio" value="condiment"/>
@@ -47,8 +47,5 @@
       </div>
 
     </div>
-    <script>
-      $("input[name='message']").select();
-    </script>
   </body>
 </html>
