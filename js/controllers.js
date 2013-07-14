@@ -15,4 +15,3 @@ angular.module('inkanote.controllers', [])
                "Joe Doe"
     };
   }]);
->>>>>>> master
