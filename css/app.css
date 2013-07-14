@@ -16,11 +16,14 @@
 .font-alef {
   font-family: 'Alef', sans-serif;
 }
-.preview {
+.preview, textarea[ng-model="note.message"] {
   line-height: 1.5;
   font-size: 1.2em;
   white-space: pre-wrap;
+  height: 31em;
 }
-.preview, textarea[ng-model="message"] {
-  min-height: 160px;
+.preview {
+  overflow-y: visible;
+  white-space: pre-wrap;
+  height: 30em;
 }

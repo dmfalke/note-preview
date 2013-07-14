@@ -1,3 +1,3 @@
 "use strict";
 
-angular.module("inkanote", []);
+var inkanote = angular.module("inkanote", ['inkanote.controllers', 'inkanote.filters']);
