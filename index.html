@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/app.css">
     <link href='http://fonts.googleapis.com/css?family=Condiment|Yesteryear|Finger+Paint|Alef' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/filters.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/app.js"></script>
   </head>
   <body ng-controller="NoteCtrl">
     <div class="container">
@@ -23,29 +23,14 @@
 
         <div class="span6">
           <p>Type here:</p>
-          <textarea autofocus class="input-block-level" ng-model="message"></textarea>
 
-            <label class="radio inline font-condiment">
-              <input ng-model="font" type="radio" value="condiment"/>
-              Condiment</label>
+          <textarea autofocus
+            class="input-block-level font-{{note.font}}" ng-model="note.message"></textarea>
 
-            <label class="radio inline font-yesteryear">
-              <input ng-model="font" type="radio" value="yesteryear"/>
-              Yesteryear</label>
+          <label ng-repeat="font in fonts" class="radio inline font-{{font}}">
+            <input ng-model="note.font" type="radio" value="{{font}}"/>
+            {{font | cameldash}}</label>
 
-            <label class="radio inline font-finger-paint">
-              <input ng-model="font" type="radio" value="finger-paint"/>
-              Finger Paint</label>
-
-            <label class="radio inline font-alef">
-              <input ng-model="font" type="radio" value="alef"/>
-              Alef</label>
-        </div>
-
-
-        <div class="span6">
-          <p>Your preview will appear here:</p>
-          <div class="well well-small preview font-{{font}}"/>{{message}}</div>
         </div>
 
       </div>
