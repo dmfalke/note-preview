@@ -1,3 +1,3 @@
 "use strict";
 
-var inkanote = angular.module("inkanote", ['inkanote.controllers', 'inkanote.filters']);
+var inkanote = angular.module("inkanote", ['inkanote.controllers', 'inkanote.filters', 'inkanote.directives']);
